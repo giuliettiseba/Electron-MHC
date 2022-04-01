@@ -1,0 +1,131 @@
+﻿TOPIC
+    about_get-vmscamerareport
+
+    Este tema es una extensi ³n de la documentaci ³n de Get-VmsCameraReport
+
+SHORT DESCRIPTION
+    El cmdlet Get-VmsCameraReport proporciona una gran cantidad de columnas de 
+    datos para cada c ¡mara. Si bien tratamos de proporcionar un nombre de
+    columna  descriptivo, el significado de los valores no siempre es claro. Y,
+    a veces, es  posible que los valores no sean los que espera ver. Este tema
+    sirve para documentar  parte de esta informaci ³n para responder preguntas
+    que pueden surgir cuando este  comando se usa en producci ³n.
+
+LONG DESCRIPTION
+    Las columnas de IsStarted a StatusTime provienen de la interfaz
+    RecorderStatusService2  utilizando el m ©todo GetCurrentDeviceStatus. Estos
+    valores solo se pueden proporcionar  si su sesi ³n de PowerShell puede
+    establecer una conexi ³n con el servidor de grabaci ³n   en el puerto 7563 (predeterminado).
+    Es posible que las columnas Modelo y Firmware no reflejen perfectamente el
+    modelo y el  firmware actuales, pero es de esperar que coincidan con
+    precisi ³n con lo que se muestra  en Management Client. El firmware es
+    especialmente problem ¡tico ya que el valor solo se  actualiza cuando se
+    realiza un "Reemplazo de hardware" en la c ¡mara en Management Client. 
+    Actualmente no existe ning ºn mecanismo para realizar Reemplazo de hardware
+    usando  MIP SDK o MilestonePSTools.
+    La informaci ³n de la transmisi ³n configurada
+    frente a la actual
+    coincidir ¡
+    generalmente
+    ,  pero a veces las propiedades de configuraci ³n de la transmisi ³n no
+    est ¡n disponibles,  como en el controlador de c ¡mara universal. Y, a
+    veces, incluso si las propiedades de la  transmisi ³n actual y configurada
+    est ¡n disponibles, es posible que no coincidan.  Eso estar -a fuera de lo
+    com ºn, pero ha sucedido. Por ejemplo, si una c ¡mara est ¡ siendo 
+    utilizada por dos VMS diferentes, uno puede actualizar las propiedades de la
+    transmisi ³n  para que no est ©n sincronizadas con el otro.
+    La funci ³n Instant ¡nea puede ser muy  ºtil, pero no puede exportar una
+    instant ¡nea jpeg  a un archivo CSV de una manera que todas las aplicaciones
+    comprendan universalmente.  Podr -a, por ejemplo, codificar la imagen en
+    base64 e incluirla en formato de texto.  Pero para mostrar la imagen, la
+    aplicaci ³n consumidora necesitar -a saber qu © hacer con  esos datos
+    binarios codificados. Proporcionaremos un ejemplo de c ³mo podr -a procesar 
+    la columna de instant ¡neas en una muestra futura.
+
+Summary of all potential columns
+    |Column                        |Description                                                                         |
+    |------------------------------|------------------------------------------------------------------------------------|
+    |Name                          |Nombre de la c ¡mara                                                                 |
+    |Channel                       |El n ºmero de canal, contando desde 0                                                |
+    |Enabled                       |Verdadero si tanto el hardware como la c ¡mara est ¡n habilitados                     |
+    |State                         |El estado seg ºn Event Server                                                        |
+    |LastModified                  |Marca de tiempo del  ºltimo  ºltimo cambio de configuraci ³n                           |
+    |Id                            |Un GUID que representa el ID de la c ¡mara en el VMS                                 |
+    |IsStarted                     |Verdadero si el servidor de grabaci ³n ha iniciado el dispositivo                    |
+    |IsMotionDetected              |Verdadero si se detecta movimiento en la c ¡mara                                     |
+    |IsRecording                   |Verdadero si la grabaci ³n est ¡ en curso                                             |
+    |IsInOverflow                  |Verdadero si el almacenamiento no puede grabar lo suficientemente r ¡pido            |
+    |IsInDbRepair                  |Verdadero si el servidor de grabaci ³n est ¡ reparando la base de datos               |
+    |ErrorWritingGOP               |Verdadero si el servidor de grabaci ³n no puede escribir en la base de datos         |
+    |ErrorNotLicensed              |Verdadero si el dispositivo no tiene licencia o ha caducado el periodo gracia       |
+    |ErrorNoConnection             |Verdadero si el servidor de grabaci ³n no puede recibir flujo                        |
+    |StatusTime                    |Marca de tiempo de la informaci ³n de estado del registrador                         |
+    |GpsCoordinates                |El LAT, LONG o 'Desconocido' si no se especifica                                    |
+    |HardwareName                  |Nombre del dispositivo de hardware principal de la c ¡mara                           |
+    |HardwareId                    |El ID del dispositivo de hardware principal                                         |
+    |Model                         |Modelo del dispositivo de hardware principal                                        |
+    |Address                       |URI del hardware principal. Ejemplo: http://mycam/                                  |
+    |Username                      |El nombre de usuario del dispositivo de hardware principal.                         |
+    |Password                      |Requiere -IncludePlainTextPassword                                                  |
+    |HTTPSEnabled                  |Verdadero si HTTPS est ¡ habilitado para el dispositivo de hardware                  |
+    |MAC                           |Direcci ³n MAC para el dispositivo de hardware principal                             |
+    |Firmware                      | šltimo firmware conocido del dispositivo de hardware principal                      |
+    |DriverFamily                  |Driver "GroupName" - ejemplo: Axis, Bosch                                           |
+    |Driver                        |Nombre del controlador de dispositivo para el hardware principal                    |
+    |DriverNumber                  |El n ºmero de controlador para el controlador del paquete de dispositivo             |
+    |DriverVersion                 |Valor de versi ³n del controlador del paquete de dispositivo                         |
+    |DriverRevision                |Valor de revisi ³n del controlador para el hardware principal                        |
+    |RecorderName                  |Nombre para mostrar del servidor de grabaci ³n principal                             |
+    |RecorderUri                   |Puerto y nombre de host del servidor de grabaci ³n como URI                          |
+    |RecorderId                    |El ID del servidor de grabaci ³n                                                     |
+    |LiveStream                    |Nombre interno de la transmisi ³n de video utilizada para la transmisi ³n en vivo     |
+    |LiveStreamDescription         |Nombre personalizado opcional para la transmisi ³n en vivo                           |
+    |LiveStreamMode                |Siempre / Nunca / Cuando sea necesario                                              |
+    |ConfiguredLiveResolution      |Resoluci ³n de transmisi ³n en vivo, si el valor est ¡ disponible                      |
+    |ConfiguredLiveCodec           |C ³dec de transmisi ³n en vivo, si el valor est ¡ disponible                           |
+    |ConfiguredLiveFPS             |Transmisi ³n en vivo de FPS, si el valor est ¡ disponible                             |
+    |CurrentLiveResolution         |Resoluci ³n en vivo actual seg ºn la grabadora                                        |
+    |CurrentLiveCodec              |C ³dec en vivo actual seg ºn la grabadora                                             |
+    |CurrentLiveFPS                |FPS en vivo actual seg ºn la grabadora                                               |
+    |CurrentLiveBitrate            |Tasa de bits en vivo actual seg ºn la grabadora                                      |
+    |RecordedStream                |Nombre interno de la secuencia de v -deo utilizada para la grabaci ³n                 |
+    |RecordedStreamDescription     |Nombre personalizado opcional para la secuencia grabada                             |
+    |RecordedStreamMode            |Siempre / Nunca / Cuando sea necesario                                              |
+    |ConfiguredRecordedResolution  |Resoluci ³n de secuencia grabada, si est ¡ disponible                                 |
+    |ConfiguredRecordedCodec       |C ³dec de flujo grabado, si est ¡ disponible                                          |
+    |ConfiguredRecordedFPS         |Secuencia grabada FPS, si est ¡ disponible                                           |
+    |CurrentRecordedResolution     |Resoluci ³n actual grabada                                                           |
+    |CurrentRecordedCodec          |C ³dec grabado actual seg ºn el registrador                                           |
+    |CurrentRecordedFPS            |FPS actual grabado seg ºn el registrador                                             |
+    |CurrentRecordedBitrate        |Tasa de bits registrada actual seg ºn el registrador                                 |
+    |RecordingEnabled              |Verdadero si la grabaci ³n est ¡ habilitada para esta c ¡mara                          |
+    |RecordKeyframesOnly           |Verdadero si graba solo fotogramas clave                                            |
+    |RecordOnRelatedDevices        |Verdadero si la grabaci ³n en dispositivos relacionados est ¡ habilitada              |
+    |PrebufferEnabled              |Verdadero si el prebuffer est ¡ habilitado para la c ¡mara                            |
+    |PrebufferSeconds              |N ºmero m ¡ximo de segundos disponibles en prebuffer                                  |
+    |PrebufferInMemory             |Verdadero si se almacena previamente en memoria en lugar de en disco                |
+    |RecordingStorageName          |Nombre de visualizaci ³n del almacenamiento de grabaci ³n para la c ¡mara              |
+    |RecordingPath                 |Ruta del disco de almacenamiento de grabaciones en la grabadora                     |
+    |ExpectedRetentionDays         |N ºmero m -nimo esperado de d -as para registrar                                       |
+    |PercentRecordedOneWeek        |Porcentaje de tiempo registrado en los 7 d -as anteriores                            |
+    |MediaDatabaseBegin            |Marca de tiempo UTC de la primera imagen grabada                                    |
+    |MediaDatabaseEnd              |Marca de tiempo UTC de la  ºltima imagen grabada                                     |
+    |UsedSpaceInGB                 |Espacio en disco utilizado por la c ¡mara en GB                                      |
+    |ActualRetentionDays           |D -as entre ahora y la primera imagen grabada                                        |
+    |MeetsRetentionPolicy          |Verdadero si la imagen m ¡s antigua es <= MediaDatabaseBegin                         |
+    |MotionEnabled                 |Verdadero si la detecci ³n de movimiento del lado del servidor est ¡ habilitada       |
+    |MotionKeyframesOnly           |Verdadero si se detecta movimiento solo en fotogramas clave                         |
+    |MotionProcessTime             |Intervalo, en MS, entre el procesamiento de movimiento                              |
+    |MotionManualSensitivityEnabled|Verdadero si los ajustes de sensibilidad al movimiento son manuales                 |
+    |MotionManualSensitivity       |Valor actual de sensibilidad de detecci ³n de movimiento                             |
+    |MotionMetadataEnabled         |Verdadero si captura metadatos de detecci ³n de movimiento                           |
+    |MotionExcludeRegions          |Verdadero si se define una regi ³n de exclusi ³n de movimiento                        |
+    |MotionHardwareAccelerationMode|Autom ¡tico / Apagado - modo de aceleraci ³n de hardware                              |
+    |PrivacyMaskEnabled            |True si una m ¡scara de privacidad est ¡ habilitada                                   |
+    |Snapshot                      |System.Drawing.Image de la instant ¡nea en vivo JPEG                                 |
+
+KEYWORDS
+    - Get-CameraReport
+- CameraReport
+- Camera Report
+

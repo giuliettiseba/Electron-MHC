@@ -1,0 +1,134 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">MipSdkRedist</S>
+      <Version N="Version">21.2.0</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Used for easy importing of the Milestone Systems MIP SDK components in a PowerShell 5.1 environment.</S>
+      <S N="Author">Josh Hendricks</S>
+      <S N="CompanyName">JHendricks</S>
+      <S N="Copyright">(c) 2021 Milestone Systems. All rights reserved.</S>
+      <DT N="PublishedDate">2021-10-27T16:28:30-05:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2022-01-07T00:00:11.7712216-06:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://www.milestonepstools.com/</URI>
+      <URI N="IconUri">https://milestonepstools.com/assets/images/MilestoneLogo.png</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSEdition_Desktop</S>
+          <S>Windows</S>
+          <S>Milestone</S>
+          <S>ConfigApi</S>
+          <S>ConfigurationApi</S>
+          <S>XProtect</S>
+          <S>MIPSDK</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">See the [ChangeLog](https://www.milestonepstools.com/CHANGELOG/)</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="2" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2021 Milestone Systems. All rights reserved.</S>
+          <S N="description">Used for easy importing of the Milestone Systems MIP SDK components in a PowerShell 5.1 environment.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">See the [ChangeLog](https://www.milestonepstools.com/CHANGELOG/)</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">14078</S>
+          <S N="downloadCount">48190</S>
+          <S N="packageSize">53596929</S>
+          <S N="published">10/27/2021 4:28:30 PM -05:00</S>
+          <S N="created">10/27/2021 4:28:30 PM -05:00</S>
+          <S N="lastUpdated">1/7/2022 4:32:57 AM -06:00</S>
+          <S N="tags">PSEdition_Desktop Windows Milestone ConfigApi ConfigurationApi XProtect MIPSDK PSModule</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2022-01-07T04:32:57Z</S>
+          <S N="NormalizedVersion">21.2.0</S>
+          <S N="Authors">Josh Hendricks</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">MipSdkRedist.nuspec|MipSdkRedist.psd1|bin\Microsoft.IdentityModel.Logging.dll|bin\ToolkitFactoryProvider.dll|bin\VideoOS.Toolkit.PInvoke.dll|bin\cs-CZ\VideoOS.Platform.resources.dll|bin\es-ES\VideoOS.Platform.SDK.UI.resources.dll|bin\he-IL\VideoOS.Platform.resources.dll|bin\hu-HU\VideoOS.Platform.SDK.UI.resources.dll|bin\ko-KR\VideoOS.Platform.resources.dll|bin\pl-PL\VideoOS.Platform.SDK.UI.resources.dll|bin\sr-Latn-RS\VideoOS.Platform.resources.dll|bin\tr-TR\VideoOS.Platform.SDK.UI.resources.dll|MipSdkRedist.psm1|bin\Microsoft.IdentityModel.Protocols.dll|bin\ToolkitSourcePlugin_mm025.dll|bin\VideoOS.UI.Common.WPF.dll|bin\cs-CZ\VideoOS.Platform.SDK.Export.resources.dll|bin\es-ES\VideoOS.UI.Common.WPF.resources.dll|bin\he-IL\VideoOS.Platform.SDK.Export.resources.dll|bin\hu-HU\VideoOS.UI.Common.WPF.resources.dll|bin\ko-KR\VideoOS.Platform.SDK.Export.resources.dll|bin\pl-PL\VideoOS.UI.Common.WPF.resources.dll|bin\sr-Latn-RS\VideoOS.Platform.SDK.Export.resources.dll|bin\tr-TR\VideoOS.UI.Common.WPF.resources.dll|README.md|bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll|bin\VideoOS.ConfigurationAPI.dll|bin\VideoOS.UI.Common.WPF.VideoPlayer.dll|bin\cs-CZ\VideoOS.Platform.SDK.resources.dll|bin\es-ES\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\he-IL\VideoOS.Platform.SDK.resources.dll|bin\hu-HU\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\ko-KR\VideoOS.Platform.SDK.resources.dll|bin\pl-PL\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\sr-Latn-RS\VideoOS.Platform.SDK.resources.dll|bin\tr-TR\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\3rd_party_software_terms_and_conditions.txt|bin\Microsoft.IdentityModel.Tokens.dll|bin\VideoOS.DatabaseUtility.Common.dll|bin\VideoOS.UI.manifest|bin\cs-CZ\VideoOS.Platform.SDK.UI.resources.dll|bin\fa-IR\VideoOS.Platform.resources.dll|bin\he-IL\VideoOS.Platform.SDK.UI.resources.dll|bin\is-IS\VideoOS.Platform.resources.dll|bin\ko-KR\VideoOS.Platform.SDK.UI.resources.dll|bin\pt-BR\VideoOS.Platform.resources.dll|bin\sr-Latn-RS\VideoOS.Platform.SDK.UI.resources.dll|bin\uk-UA\VideoOS.Platform.resources.dll|bin\Autofac.dll|bin\Microsoft.Owin.dll|bin\VideoOS.DatabaseUtility.MediaStorage.dll|bin\VideoOS.Utilities.dll|bin\cs-CZ\VideoOS.UI.Common.WPF.resources.dll|bin\fa-IR\VideoOS.Platform.SDK.Export.resources.dll|bin\he-IL\VideoOS.UI.Common.WPF.resources.dll|bin\is-IS\VideoOS.Platform.SDK.Export.resources.dll|bin\ko-KR\VideoOS.UI.Common.WPF.resources.dll|bin\pt-BR\VideoOS.Platform.SDK.Export.resources.dll|bin\sr-Latn-RS\VideoOS.UI.Common.WPF.resources.dll|bin\uk-UA\VideoOS.Platform.SDK.Export.resources.dll|bin\Autofac.xml|bin\MipSdkRedist.dll|bin\VideoOS.IdentityServer.Common.dll|bin\xerces-c-vc120_3_2_3.dll|bin\cs-CZ\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\fa-IR\VideoOS.Platform.SDK.resources.dll|bin\he-IL\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\is-IS\VideoOS.Platform.SDK.resources.dll|bin\ko-KR\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\pt-BR\VideoOS.Platform.SDK.resources.dll|bin\sr-Latn-RS\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\uk-UA\VideoOS.Platform.SDK.resources.dll|bin\AVIExporterClientMW.dll|bin\MipSdkRedist.dll.config|bin\VideoOS.LogServer.Communication.dll|bin\xqilla-vc120_234_323.dll|bin\da-DK\VideoOS.Platform.resources.dll|bin\fa-IR\VideoOS.Platform.SDK.UI.resources.dll|bin\hi-IN\VideoOS.Platform.resources.dll|bin\is-IS\VideoOS.Platform.SDK.UI.resources.dll|bin\nb-NO\VideoOS.Platform.resources.dll|bin\pt-BR\VideoOS.Platform.SDK.UI.resources.dll|bin\sv-SE\VideoOS.Platform.resources.dll|bin\uk-UA\VideoOS.Platform.SDK.UI.resources.dll|bin\boost_chrono-vc120-mt-1_74.dll|bin\MipSdkRedist.pdb|bin\VideoOS.Management.Common.dll|bin\15dd936825ad475ea34e35f3f54217a6\mfxplugin64_hevcd_sw.dll|bin\da-DK\VideoOS.Platform.SDK.Export.resources.dll|bin\fa-IR\VideoOS.UI.Common.WPF.resources.dll|bin\hi-IN\VideoOS.Platform.SDK.Export.resources.dll|bin\is-IS\VideoOS.UI.Common.WPF.resources.dll|bin\nb-NO\VideoOS.Platform.SDK.Export.resources.dll|bin\pt-BR\VideoOS.UI.Common.WPF.resources.dll|bin\sv-SE\VideoOS.Platform.SDK.Export.resources.dll|bin\uk-UA\VideoOS.UI.Common.WPF.resources.dll|bin\boost_serialization-vc120-mt-1_74.dll|bin\Mm025.dll|bin\VideoOS.Management.VmoClient.dll|bin\15dd936825ad475ea34e35f3f54217a6\plugin.cfg|bin\da-DK\VideoOS.Platform.SDK.resources.dll|bin\fa-IR\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\hi-IN\VideoOS.Platform.SDK.resources.dll|bin\is-IS\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\nb-NO\VideoOS.Platform.SDK.resources.dll|bin\pt-BR\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\sv-SE\VideoOS.Platform.SDK.resources.dll|bin\uk-UA\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\boost_system-vc120-mt-1_74.dll|bin\msvcp120.dll|bin\VideoOS.Management.VmoClient.XML|bin\ar-SA\VideoOS.Platform.resources.dll|bin\da-DK\VideoOS.Platform.SDK.UI.resources.dll|bin\fi-FI\VideoOS.Platform.resources.dll|bin\hi-IN\VideoOS.Platform.SDK.UI.resources.dll|bin\it-IT\VideoOS.Platform.resources.dll|bin\nb-NO\VideoOS.Platform.SDK.UI.resources.dll|bin\ru-RU\VideoOS.Platform.resources.dll|bin\sv-SE\VideoOS.Platform.SDK.UI.resources.dll|bin\zh-CN\VideoOS.Platform.resources.dll|bin\boost_thread-vc120-mt-1_74.dll|bin\msvcr120.dll|bin\VideoOS.Platform.Common.dll|bin\ar-SA\VideoOS.Platform.SDK.Export.resources.dll|bin\da-DK\VideoOS.UI.Common.WPF.resources.dll|bin\fi-FI\VideoOS.Platform.SDK.Export.resources.dll|bin\hi-IN\VideoOS.UI.Common.WPF.resources.dll|bin\it-IT\VideoOS.Platform.SDK.Export.resources.dll|bin\nb-NO\VideoOS.UI.Common.WPF.resources.dll|bin\ru-RU\VideoOS.Platform.SDK.Export.resources.dll|bin\sv-SE\VideoOS.UI.Common.WPF.resources.dll|bin\zh-CN\VideoOS.Platform.SDK.Export.resources.dll|bin\CoreToolkits.dll|bin\NAudio.dll|bin\VideoOS.Platform.dll|bin\ar-SA\VideoOS.Platform.SDK.resources.dll|bin\da-DK\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\fi-FI\VideoOS.Platform.SDK.resources.dll|bin\hi-IN\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\it-IT\VideoOS.Platform.SDK.resources.dll|bin\nb-NO\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\ru-RU\VideoOS.Platform.SDK.resources.dll|bin\sv-SE\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\zh-CN\VideoOS.Platform.SDK.resources.dll|bin\cudart64_101.dll|bin\Newtonsoft.Json.dll|bin\VideoOS.Platform.Primitives.dll|bin\ar-SA\VideoOS.Platform.SDK.UI.resources.dll|bin\de-DE\VideoOS.Platform.resources.dll|bin\fi-FI\VideoOS.Platform.SDK.UI.resources.dll|bin\hr-HR\VideoOS.Platform.resources.dll|bin\it-IT\VideoOS.Platform.SDK.UI.resources.dll|bin\nl-NL\VideoOS.Platform.resources.dll|bin\ru-RU\VideoOS.Platform.SDK.UI.resources.dll|bin\th-TH\VideoOS.Platform.resources.dll|bin\zh-CN\VideoOS.Platform.SDK.UI.resources.dll|bin\DBExporterClientMW.dll|bin\nppc64_10.dll|bin\VideoOS.Platform.SDK.dll|bin\ar-SA\VideoOS.UI.Common.WPF.resources.dll|bin\de-DE\VideoOS.Platform.SDK.Export.resources.dll|bin\fi-FI\VideoOS.UI.Common.WPF.resources.dll|bin\hr-HR\VideoOS.Platform.SDK.Export.resources.dll|bin\it-IT\VideoOS.UI.Common.WPF.resources.dll|bin\nl-NL\VideoOS.Platform.SDK.Export.resources.dll|bin\ru-RU\VideoOS.UI.Common.WPF.resources.dll|bin\th-TH\VideoOS.Platform.SDK.Export.resources.dll|bin\zh-CN\VideoOS.UI.Common.WPF.resources.dll|bin\IMV1.dll|bin\nppicom64_10.dll|bin\VideoOS.Platform.SDK.Export.dll|bin\ar-SA\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\de-DE\VideoOS.Platform.SDK.resources.dll|bin\fi-FI\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\hr-HR\VideoOS.Platform.SDK.resources.dll|bin\it-IT\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\nl-NL\VideoOS.Platform.SDK.resources.dll|bin\ru-RU\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\th-TH\VideoOS.Platform.SDK.resources.dll|bin\zh-CN\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\libmfxaudiosw64.dll|bin\Owin.dll|bin\VideoOS.Platform.SDK.Log.dll|bin\bg-BG\VideoOS.Platform.resources.dll|bin\de-DE\VideoOS.Platform.SDK.UI.resources.dll|bin\fr-FR\VideoOS.Platform.resources.dll|bin\hr-HR\VideoOS.Platform.SDK.UI.resources.dll|bin\ja-JP\VideoOS.Platform.resources.dll|bin\nl-NL\VideoOS.Platform.SDK.UI.resources.dll|bin\sk-SK\VideoOS.Platform.resources.dll|bin\th-TH\VideoOS.Platform.SDK.UI.resources.dll|bin\zh-TW\VideoOS.Platform.resources.dll|bin\libmfxsw64.dll|bin\ServerCommandServiceClient.dll|bin\VideoOS.Platform.SDK.Media.dll|bin\bg-BG\VideoOS.Platform.SDK.Export.resources.dll|bin\de-DE\VideoOS.UI.Common.WPF.resources.dll|bin\fr-FR\VideoOS.Platform.SDK.Export.resources.dll|bin\hr-HR\VideoOS.UI.Common.WPF.resources.dll|bin\ja-JP\VideoOS.Platform.SDK.Export.resources.dll|bin\nl-NL\VideoOS.UI.Common.WPF.resources.dll|bin\sk-SK\VideoOS.Platform.SDK.Export.resources.dll|bin\th-TH\VideoOS.UI.Common.WPF.resources.dll|bin\zh-TW\VideoOS.Platform.SDK.Export.resources.dll|bin\mfc120.dll|bin\System.IdentityModel.Tokens.Jwt.dll|bin\VideoOS.Platform.SDK.RemoteRetrievalTasks.dll|bin\bg-BG\VideoOS.Platform.SDK.resources.dll|bin\de-DE\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\fr-FR\VideoOS.Platform.SDK.resources.dll|bin\hr-HR\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\ja-JP\VideoOS.Platform.SDK.resources.dll|bin\nl-NL\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\sk-SK\VideoOS.Platform.SDK.resources.dll|bin\th-TH\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\zh-TW\VideoOS.Platform.SDK.resources.dll|bin\mfcm120.dll|bin\System.Management.Automation.dll|bin\VideoOS.Platform.SDK.UI.dll|bin\bg-BG\VideoOS.Platform.SDK.UI.resources.dll|bin\es-ES\VideoOS.Platform.resources.dll|bin\fr-FR\VideoOS.Platform.SDK.UI.resources.dll|bin\hu-HU\VideoOS.Platform.resources.dll|bin\ja-JP\VideoOS.Platform.SDK.UI.resources.dll|bin\pl-PL\VideoOS.Platform.resources.dll|bin\sk-SK\VideoOS.Platform.SDK.UI.resources.dll|bin\tr-TR\VideoOS.Platform.resources.dll|bin\zh-TW\VideoOS.Platform.SDK.UI.resources.dll|bin\Microsoft.AspNetCore.JsonPatch.dll|bin\System.Net.Http.Formatting.dll|bin\VideoOS.Toolkit.dll|bin\bg-BG\VideoOS.UI.Common.WPF.resources.dll|bin\es-ES\VideoOS.Platform.SDK.Export.resources.dll|bin\fr-FR\VideoOS.UI.Common.WPF.resources.dll|bin\hu-HU\VideoOS.Platform.SDK.Export.resources.dll|bin\ja-JP\VideoOS.UI.Common.WPF.resources.dll|bin\pl-PL\VideoOS.Platform.SDK.Export.resources.dll|bin\sk-SK\VideoOS.UI.Common.WPF.resources.dll|bin\tr-TR\VideoOS.Platform.SDK.Export.resources.dll|bin\zh-TW\VideoOS.UI.Common.WPF.resources.dll|bin\Microsoft.IdentityModel.JsonWebTokens.dll|bin\System.Web.Http.dll|bin\VideoOS.Toolkit.NetCore.dll|bin\bg-BG\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\es-ES\VideoOS.Platform.SDK.resources.dll|bin\fr-FR\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\hu-HU\VideoOS.Platform.SDK.resources.dll|bin\ja-JP\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\pl-PL\VideoOS.Platform.SDK.resources.dll|bin\sk-SK\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\tr-TR\VideoOS.Platform.SDK.resources.dll|bin\zh-TW\VideoOS.UI.Common.WPF.VideoPlayer.resources.dll|bin\System.Web.Http.Owin.dll</S>
+          <S N="GUID">eb437244-874f-4a6d-b0a5-309b8e93e884</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.0</S>
+          <S N="CLRVersion">4.0</S>
+          <S N="ProcessorArchitecture">Amd64</S>
+          <S N="CompanyName">Milestone Systems</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\sgiu\OneDrive - Milestone Systems\Documents\PowerShell\Modules\MipSdkRedist\21.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

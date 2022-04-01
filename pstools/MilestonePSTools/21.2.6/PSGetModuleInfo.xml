@@ -1,0 +1,514 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">MilestonePSTools</S>
+      <Version N="Version">21.2.6</Version>
+      <S N="Type">Module</S>
+      <S N="Description">Milestone XProtect VMS configuration and automation powered by the Milestone MIP SDK.</S>
+      <S N="Author">Joshua Hendricks</S>
+      <S N="CompanyName">JHendricks</S>
+      <S N="Copyright">(c) 2022 Milestone Systems. All rights reserved.</S>
+      <DT N="PublishedDate">2022-02-09T06:32:11-06:00</DT>
+      <Obj N="InstalledDate" RefId="1">
+        <DT>2022-02-17T09:05:21.243184-06:00</DT>
+        <MS>
+          <Obj N="DisplayHint" RefId="2">
+            <TN RefId="1">
+              <T>Microsoft.PowerShell.Commands.DisplayHintType</T>
+              <T>System.Enum</T>
+              <T>System.ValueType</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>DateTime</ToString>
+            <I32>2</I32>
+          </Obj>
+        </MS>
+      </Obj>
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://www.milestonepstools.com/</URI>
+      <URI N="IconUri">https://www.milestonepstools.com/assets/images/MilestoneLogo.png</URI>
+      <Obj N="Tags" RefId="3">
+        <TN RefId="2">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSEdition_Desktop</S>
+          <S>Windows</S>
+          <S>Milestone</S>
+          <S>ConfigApi</S>
+          <S>ConfigurationApi</S>
+          <S>XProtect</S>
+          <S>MIPSDK</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="4">
+        <TN RefId="3">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-Bookmark</S>
+                <S>Add-DeviceGroup</S>
+                <S>Add-DeviceGroupMember</S>
+                <S>Add-EvidenceLock</S>
+                <S>Add-GenericEvent</S>
+                <S>Add-Hardware</S>
+                <S>Add-RegisteredService</S>
+                <S>Add-Role</S>
+                <S>Add-Stream</S>
+                <S>Add-User</S>
+                <S>Add-UserDefinedEvent</S>
+                <S>Clear-VmsCache</S>
+                <S>Connect-ManagementServer</S>
+                <S>Copy-EvidenceLock</S>
+                <S>Disconnect-ManagementServer</S>
+                <S>Get-AlarmDefinition</S>
+                <S>Get-AlarmLine</S>
+                <S>Get-AlarmStatistics</S>
+                <S>Get-Bookmark</S>
+                <S>Get-Camera</S>
+                <S>Get-CameraSetting</S>
+                <S>Get-ConfigurationItem</S>
+                <S>Get-ConnectionString</S>
+                <S>Get-DeviceAcl</S>
+                <S>Get-DeviceGroup</S>
+                <S>Get-EventLine</S>
+                <S>Get-EvidenceLock</S>
+                <S>Get-GenericEvent</S>
+                <S>Get-GenericEventDataSource</S>
+                <S>Get-Hardware</S>
+                <S>Get-HardwareDriver</S>
+                <S>Get-HardwarePassword</S>
+                <S>Get-HardwareSetting</S>
+                <S>Get-IAlarmClient</S>
+                <S>Get-IConfigurationService</S>
+                <S>Get-Input</S>
+                <S>Get-InputSetting</S>
+                <S>Get-IServerCommandService</S>
+                <S>Get-ItemState</S>
+                <S>Get-Kind</S>
+                <S>Get-VmsLog</S>
+                <S>Get-LoginSettings</S>
+                <S>Get-VmsManagementServer</S>
+                <S>Get-Metadata</S>
+                <S>Get-MetadataSetting</S>
+                <S>Get-MethodInfo</S>
+                <S>Get-Microphone</S>
+                <S>Get-MicrophoneSetting</S>
+                <S>Get-MipMessageIdList</S>
+                <S>Get-MipSdkEula</S>
+                <S>Get-Output</S>
+                <S>Get-OutputSetting</S>
+                <S>Get-OverallSecurity</S>
+                <S>Get-PlatformItem</S>
+                <S>Get-PlaybackInfo</S>
+                <S>Get-RecorderStatusService2</S>
+                <S>Get-RecordingServer</S>
+                <S>Get-RegisteredService</S>
+                <S>Get-Role</S>
+                <S>Get-SequenceData</S>
+                <S>Get-Site</S>
+                <S>Get-Snapshot</S>
+                <S>Get-Speaker</S>
+                <S>Get-SpeakerSetting</S>
+                <S>Get-Stream</S>
+                <S>Get-Token</S>
+                <S>Get-Translations</S>
+                <S>Get-User</S>
+                <S>Get-UserDefinedEvent</S>
+                <S>Get-VideoSource</S>
+                <S>Get-WhoIsOnline</S>
+                <S>Invoke-Method</S>
+                <S>Invoke-MipSdkEula</S>
+                <S>New-Alarm</S>
+                <S>New-AlarmCondition</S>
+                <S>New-AlarmOrder</S>
+                <S>Remove-Bookmark</S>
+                <S>Remove-DeviceGroup</S>
+                <S>Remove-EvidenceLock</S>
+                <S>Remove-GenericEvent</S>
+                <S>Remove-Hardware</S>
+                <S>Remove-RegisteredService</S>
+                <S>Remove-Role</S>
+                <S>Remove-Stream</S>
+                <S>Remove-User</S>
+                <S>Remove-UserDefinedEvent</S>
+                <S>Select-Site</S>
+                <S>Send-Alarm</S>
+                <S>Send-GenericEvent</S>
+                <S>Send-MipMessage</S>
+                <S>Send-UserDefinedEvent</S>
+                <S>Set-CameraSetting</S>
+                <S>Set-ConfigurationItem</S>
+                <S>Set-DeviceAcl</S>
+                <S>Set-HardwarePassword</S>
+                <S>Set-HardwareSetting</S>
+                <S>Set-InputSetting</S>
+                <S>Set-MetadataSetting</S>
+                <S>Set-MicrophoneSetting</S>
+                <S>Set-OutputSetting</S>
+                <S>Set-OverallSecurity</S>
+                <S>Set-SpeakerSetting</S>
+                <S>Set-Stream</S>
+                <S>Start-Export</S>
+                <S>Test-Playback</S>
+                <S>Trace-Events</S>
+                <S>Update-AlarmLine</S>
+                <S>Update-Bookmark</S>
+                <S>Update-EvidenceLock</S>
+                <S>Update-RegisteredService</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Add-Bookmark</S>
+                <S>Add-DeviceGroup</S>
+                <S>Add-DeviceGroupMember</S>
+                <S>Add-EvidenceLock</S>
+                <S>Add-GenericEvent</S>
+                <S>Add-Hardware</S>
+                <S>Add-RegisteredService</S>
+                <S>Add-Role</S>
+                <S>Add-Stream</S>
+                <S>Add-User</S>
+                <S>Add-UserDefinedEvent</S>
+                <S>Clear-VmsCache</S>
+                <S>Connect-ManagementServer</S>
+                <S>Copy-EvidenceLock</S>
+                <S>Disconnect-ManagementServer</S>
+                <S>Get-AlarmDefinition</S>
+                <S>Get-AlarmLine</S>
+                <S>Get-AlarmStatistics</S>
+                <S>Get-Bookmark</S>
+                <S>Get-Camera</S>
+                <S>Get-CameraSetting</S>
+                <S>Get-ConfigurationItem</S>
+                <S>Get-ConnectionString</S>
+                <S>Get-DeviceAcl</S>
+                <S>Get-DeviceGroup</S>
+                <S>Get-EventLine</S>
+                <S>Get-EvidenceLock</S>
+                <S>Get-GenericEvent</S>
+                <S>Get-GenericEventDataSource</S>
+                <S>Get-Hardware</S>
+                <S>Get-HardwareDriver</S>
+                <S>Get-HardwarePassword</S>
+                <S>Get-HardwareSetting</S>
+                <S>Get-IAlarmClient</S>
+                <S>Get-IConfigurationService</S>
+                <S>Get-Input</S>
+                <S>Get-InputSetting</S>
+                <S>Get-IServerCommandService</S>
+                <S>Get-ItemState</S>
+                <S>Get-Kind</S>
+                <S>Get-VmsLog</S>
+                <S>Get-LoginSettings</S>
+                <S>Get-VmsManagementServer</S>
+                <S>Get-Metadata</S>
+                <S>Get-MetadataSetting</S>
+                <S>Get-MethodInfo</S>
+                <S>Get-Microphone</S>
+                <S>Get-MicrophoneSetting</S>
+                <S>Get-MipMessageIdList</S>
+                <S>Get-MipSdkEula</S>
+                <S>Get-Output</S>
+                <S>Get-OutputSetting</S>
+                <S>Get-OverallSecurity</S>
+                <S>Get-PlatformItem</S>
+                <S>Get-PlaybackInfo</S>
+                <S>Get-RecorderStatusService2</S>
+                <S>Get-RecordingServer</S>
+                <S>Get-RegisteredService</S>
+                <S>Get-Role</S>
+                <S>Get-SequenceData</S>
+                <S>Get-Site</S>
+                <S>Get-Snapshot</S>
+                <S>Get-Speaker</S>
+                <S>Get-SpeakerSetting</S>
+                <S>Get-Stream</S>
+                <S>Get-Token</S>
+                <S>Get-Translations</S>
+                <S>Get-User</S>
+                <S>Get-UserDefinedEvent</S>
+                <S>Get-VideoSource</S>
+                <S>Get-WhoIsOnline</S>
+                <S>Invoke-Method</S>
+                <S>Invoke-MipSdkEula</S>
+                <S>New-Alarm</S>
+                <S>New-AlarmCondition</S>
+                <S>New-AlarmOrder</S>
+                <S>Remove-Bookmark</S>
+                <S>Remove-DeviceGroup</S>
+                <S>Remove-EvidenceLock</S>
+                <S>Remove-GenericEvent</S>
+                <S>Remove-Hardware</S>
+                <S>Remove-RegisteredService</S>
+                <S>Remove-Role</S>
+                <S>Remove-Stream</S>
+                <S>Remove-User</S>
+                <S>Remove-UserDefinedEvent</S>
+                <S>Select-Site</S>
+                <S>Send-Alarm</S>
+                <S>Send-GenericEvent</S>
+                <S>Send-MipMessage</S>
+                <S>Send-UserDefinedEvent</S>
+                <S>Set-CameraSetting</S>
+                <S>Set-ConfigurationItem</S>
+                <S>Set-DeviceAcl</S>
+                <S>Set-HardwarePassword</S>
+                <S>Set-HardwareSetting</S>
+                <S>Set-InputSetting</S>
+                <S>Set-MetadataSetting</S>
+                <S>Set-MicrophoneSetting</S>
+                <S>Set-OutputSetting</S>
+                <S>Set-OverallSecurity</S>
+                <S>Set-SpeakerSetting</S>
+                <S>Set-Stream</S>
+                <S>Start-Export</S>
+                <S>Test-Playback</S>
+                <S>Trace-Events</S>
+                <S>Update-AlarmLine</S>
+                <S>Update-Bookmark</S>
+                <S>Update-EvidenceLock</S>
+                <S>Update-RegisteredService</S>
+                <S>Export-HardwareCsv</S>
+                <S>Import-HardwareCsv</S>
+                <S>Get-LicenseDetails</S>
+                <S>Get-LicensedProducts</S>
+                <S>Get-LicenseInfo</S>
+                <S>Get-LicenseOverview</S>
+                <S>Invoke-LicenseActivation</S>
+                <S>Get-MobileServerInfo</S>
+                <S>Remove-MobileServerCertificate</S>
+                <S>Set-MobileServerCertificate</S>
+                <S>Set-XProtectCertificate</S>
+                <S>Get-CameraRecordingStats</S>
+                <S>Get-CameraReport</S>
+                <S>Get-CurrentDeviceStatus</S>
+                <S>Get-VideoDeviceStatistics</S>
+                <S>Get-VmsCameraReport</S>
+                <S>Add-VmsArchiveStorage</S>
+                <S>Add-VmsStorage</S>
+                <S>Get-VmsArchiveStorage</S>
+                <S>Get-VmsStorage</S>
+                <S>Remove-VmsArchiveStorage</S>
+                <S>Remove-VmsStorage</S>
+                <S>ConvertFrom-ConfigurationApiProperties</S>
+                <S>ConvertFrom-GisPoint</S>
+                <S>ConvertFrom-Snapshot</S>
+                <S>ConvertTo-GisPoint</S>
+                <S>Get-BankTable</S>
+                <S>Get-ConfigurationItemProperty</S>
+                <S>Get-StreamProperties</S>
+                <S>Get-ValueDisplayName</S>
+                <S>Install-StableFPS</S>
+                <S>Invoke-ServerConfigurator</S>
+                <S>Resize-Image</S>
+                <S>Select-Camera</S>
+                <S>Select-VideoOSItem</S>
+                <S>Set-ConfigurationItemProperty</S>
+                <S>Add-VmsFailoverGroup</S>
+                <S>Add-VmsHardware</S>
+                <S>ConvertFrom-ConfigurationItem</S>
+                <S>Export-VmsHardware</S>
+                <S>Export-VmsLicenseRequest</S>
+                <S>Find-ConfigurationItem</S>
+                <S>Find-XProtectDevice</S>
+                <S>Get-ManagementServerConfig</S>
+                <S>Get-PlaybackInfo</S>
+                <S>Get-RecorderConfig</S>
+                <S>Get-VmsCamera</S>
+                <S>Get-VmsCameraGeneralSetting</S>
+                <S>Get-VmsCameraStream</S>
+                <S>Get-VmsDeviceStatus</S>
+                <S>Get-VmsFailoverGroup</S>
+                <S>Get-VmsStorageRetention</S>
+                <S>Import-VmsHardware</S>
+                <S>Import-VmsLicense</S>
+                <S>Invoke-VmsLicenseActivation</S>
+                <S>Remove-Hardware</S>
+                <S>Remove-VmsFailoverGroup</S>
+                <S>Resolve-VmsDeviceGroupPath</S>
+                <S>Set-VmsCamera</S>
+                <S>Set-VmsCameraGeneralSetting</S>
+                <S>Set-VmsCameraStream</S>
+                <S>Set-VmsLicense</S>
+                <S>Start-VmsHardwareScan</S>
+                <S>Wait-VmsTask</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="7">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="7" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="2" />
+              <LST>
+                <S>Export-HardwareCsv</S>
+                <S>Import-HardwareCsv</S>
+                <S>Get-LicenseDetails</S>
+                <S>Get-LicensedProducts</S>
+                <S>Get-LicenseInfo</S>
+                <S>Get-LicenseOverview</S>
+                <S>Invoke-LicenseActivation</S>
+                <S>Get-MobileServerInfo</S>
+                <S>Remove-MobileServerCertificate</S>
+                <S>Set-MobileServerCertificate</S>
+                <S>Set-XProtectCertificate</S>
+                <S>Get-CameraRecordingStats</S>
+                <S>Get-CameraReport</S>
+                <S>Get-CurrentDeviceStatus</S>
+                <S>Get-VideoDeviceStatistics</S>
+                <S>Get-VmsCameraReport</S>
+                <S>Add-VmsArchiveStorage</S>
+                <S>Add-VmsStorage</S>
+                <S>Get-VmsArchiveStorage</S>
+                <S>Get-VmsStorage</S>
+                <S>Remove-VmsArchiveStorage</S>
+                <S>Remove-VmsStorage</S>
+                <S>ConvertFrom-ConfigurationApiProperties</S>
+                <S>ConvertFrom-GisPoint</S>
+                <S>ConvertFrom-Snapshot</S>
+                <S>ConvertTo-GisPoint</S>
+                <S>Get-BankTable</S>
+                <S>Get-ConfigurationItemProperty</S>
+                <S>Get-StreamProperties</S>
+                <S>Get-ValueDisplayName</S>
+                <S>Install-StableFPS</S>
+                <S>Invoke-ServerConfigurator</S>
+                <S>Resize-Image</S>
+                <S>Select-Camera</S>
+                <S>Select-VideoOSItem</S>
+                <S>Set-ConfigurationItemProperty</S>
+                <S>Add-VmsFailoverGroup</S>
+                <S>Add-VmsHardware</S>
+                <S>ConvertFrom-ConfigurationItem</S>
+                <S>Export-VmsHardware</S>
+                <S>Export-VmsLicenseRequest</S>
+                <S>Find-ConfigurationItem</S>
+                <S>Find-XProtectDevice</S>
+                <S>Get-ManagementServerConfig</S>
+                <S>Get-PlaybackInfo</S>
+                <S>Get-RecorderConfig</S>
+                <S>Get-VmsCamera</S>
+                <S>Get-VmsCameraGeneralSetting</S>
+                <S>Get-VmsCameraStream</S>
+                <S>Get-VmsDeviceStatus</S>
+                <S>Get-VmsFailoverGroup</S>
+                <S>Get-VmsStorageRetention</S>
+                <S>Import-VmsHardware</S>
+                <S>Import-VmsLicense</S>
+                <S>Invoke-VmsLicenseActivation</S>
+                <S>Remove-Hardware</S>
+                <S>Remove-VmsFailoverGroup</S>
+                <S>Resolve-VmsDeviceGroupPath</S>
+                <S>Set-VmsCamera</S>
+                <S>Set-VmsCameraGeneralSetting</S>
+                <S>Set-VmsCameraStream</S>
+                <S>Set-VmsLicense</S>
+                <S>Start-VmsHardwareScan</S>
+                <S>Wait-VmsTask</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">See the changelog at https://www.milestonepstools.com/CHANGELOG/</S>
+      <Obj N="Dependencies" RefId="9">
+        <TNRef RefId="2" />
+        <LST>
+          <Obj RefId="10">
+            <TN RefId="4">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">MipSdkRedist</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">21.2.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:MipSdkRedist/21.2.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="11">
+        <TN RefId="5">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2022 Milestone Systems. All rights reserved.</S>
+          <S N="description">Milestone XProtect VMS configuration and automation powered by the Milestone MIP SDK.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">See the changelog at https://www.milestonepstools.com/CHANGELOG/</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2446</S>
+          <S N="downloadCount">57377</S>
+          <S N="packageSize">672326</S>
+          <S N="published">2/9/2022 6:32:11 AM -06:00</S>
+          <S N="created">2/9/2022 6:32:11 AM -06:00</S>
+          <S N="lastUpdated">2/17/2022 2:46:42 PM -06:00</S>
+          <S N="tags">PSEdition_Desktop Windows Milestone ConfigApi ConfigurationApi XProtect MIPSDK PSModule PSCmdlet_Add-Bookmark PSCommand_Add-Bookmark PSCmdlet_Add-DeviceGroup PSCommand_Add-DeviceGroup PSCmdlet_Add-DeviceGroupMember PSCommand_Add-DeviceGroupMember PSCmdlet_Add-EvidenceLock PSCommand_Add-EvidenceLock PSCmdlet_Add-GenericEvent PSCommand_Add-GenericEvent PSCmdlet_Add-Hardware PSCommand_Add-Hardware PSCmdlet_Add-RegisteredService PSCommand_Add-RegisteredService PSCmdlet_Add-Role PSCommand_Add-Role PSCmdlet_Add-Stream PSCommand_Add-Stream PSCmdlet_Add-User PSCommand_Add-User PSCmdlet_Add-UserDefinedEvent PSCommand_Add-UserDefinedEvent PSCmdlet_Clear-VmsCache PSCommand_Clear-VmsCache PSCmdlet_Connect-ManagementServer PSCommand_Connect-ManagementServer PSCmdlet_Copy-EvidenceLock PSCommand_Copy-EvidenceLock PSCmdlet_Disconnect-ManagementServer PSCommand_Disconnect-ManagementServer PSCmdlet_Get-AlarmDefinition PSCommand_Get-AlarmDefinition PSCmdlet_Get-AlarmLine PSCommand_Get-AlarmLine PSCmdlet_Get-AlarmStatistics PSCommand_Get-AlarmStatistics PSCmdlet_Get-Bookmark PSCommand_Get-Bookmark PSCmdlet_Get-Camera PSCommand_Get-Camera PSCmdlet_Get-CameraSetting PSCommand_Get-CameraSetting PSCmdlet_Get-ConfigurationItem PSCommand_Get-ConfigurationItem PSCmdlet_Get-ConnectionString PSCommand_Get-ConnectionString PSCmdlet_Get-DeviceAcl PSCommand_Get-DeviceAcl PSCmdlet_Get-DeviceGroup PSCommand_Get-DeviceGroup PSCmdlet_Get-EventLine PSCommand_Get-EventLine PSCmdlet_Get-EvidenceLock PSCommand_Get-EvidenceLock PSCmdlet_Get-GenericEvent PSCommand_Get-GenericEvent PSCmdlet_Get-GenericEventDataSource PSCommand_Get-GenericEventDataSource PSCmdlet_Get-Hardware PSCommand_Get-Hardware PSCmdlet_Get-HardwareDriver PSCommand_Get-HardwareDriver PSCmdlet_Get-HardwarePassword PSCommand_Get-HardwarePassword PSCmdlet_Get-HardwareSetting PSCommand_Get-HardwareSetting PSCmdlet_Get-IAlarmClient PSCommand_Get-IAlarmClient PSCmdlet_Get-IConfigurationService PSCommand_Get-IConfigurationService PSCmdlet_Get-Input PSCommand_Get-Input PSCmdlet_Get-InputSetting PSCommand_Get-InputSetting PSCmdlet_Get-IServerCommandService PSCommand_Get-IServerCommandService PSCmdlet_Get-ItemState PSCommand_Get-ItemState PSCmdlet_Get-Kind PSCommand_Get-Kind PSCmdlet_Get-VmsLog PSCommand_Get-VmsLog PSCmdlet_Get-LoginSettings PSCommand_Get-LoginSettings PSCmdlet_Get-VmsManagementServer PSCommand_Get-VmsManagementServer PSCmdlet_Get-Metadata PSCommand_Get-Metadata PSCmdlet_Get-MetadataSetting PSCommand_Get-MetadataSetting PSCmdlet_Get-MethodInfo PSCommand_Get-MethodInfo PSCmdlet_Get-Microphone PSCommand_Get-Microphone PSCmdlet_Get-MicrophoneSetting PSCommand_Get-MicrophoneSetting PSCmdlet_Get-MipMessageIdList PSCommand_Get-MipMessageIdList PSCmdlet_Get-MipSdkEula PSCommand_Get-MipSdkEula PSCmdlet_Get-Output PSCommand_Get-Output PSCmdlet_Get-OutputSetting PSCommand_Get-OutputSetting PSCmdlet_Get-OverallSecurity PSCommand_Get-OverallSecurity PSCmdlet_Get-PlatformItem PSCommand_Get-PlatformItem PSCmdlet_Get-PlaybackInfo PSCommand_Get-PlaybackInfo PSCmdlet_Get-RecorderStatusService2 PSCommand_Get-RecorderStatusService2 PSCmdlet_Get-RecordingServer PSCommand_Get-RecordingServer PSCmdlet_Get-RegisteredService PSCommand_Get-RegisteredService PSCmdlet_Get-Role PSCommand_Get-Role PSCmdlet_Get-SequenceData PSCommand_Get-SequenceData PSCmdlet_Get-Site PSCommand_Get-Site PSCmdlet_Get-Snapshot PSCommand_Get-Snapshot PSCmdlet_Get-Speaker PSCommand_Get-Speaker PSCmdlet_Get-SpeakerSetting PSCommand_Get-SpeakerSetting PSCmdlet_Get-Stream PSCommand_Get-Stream PSCmdlet_Get-Token PSCommand_Get-Token PSCmdlet_Get-Translations PSCommand_Get-Translations PSCmdlet_Get-User PSCommand_Get-User PSCmdlet_Get-UserDefinedEvent PSCommand_Get-UserDefinedEvent PSCmdlet_Get-VideoSource PSCommand_Get-VideoSource PSCmdlet_Get-WhoIsOnline PSCommand_Get-WhoIsOnline PSCmdlet_Invoke-Method PSCommand_Invoke-Method PSCmdlet_Invoke-MipSdkEula PSCommand_Invoke-MipSdkEula PSCmdlet_New-Alarm PSCommand_New-Alarm PSCmdlet_New-AlarmCondition PSCommand_New-AlarmCondition PSCmdlet_New-AlarmOrder PSCommand_New-AlarmOrder PSCmdlet_Remove-Bookmark PSCommand_Remove-Bookmark PSCmdlet_Remove-DeviceGroup PSCommand_Remove-DeviceGroup PSCmdlet_Remove-EvidenceLock PSCommand_Remove-EvidenceLock PSCmdlet_Remove-GenericEvent PSCommand_Remove-GenericEvent PSCmdlet_Remove-Hardware PSCommand_Remove-Hardware PSCmdlet_Remove-RegisteredService PSCommand_Remove-RegisteredService PSCmdlet_Remove-Role PSCommand_Remove-Role PSCmdlet_Remove-Stream PSCommand_Remove-Stream PSCmdlet_Remove-User PSCommand_Remove-User PSCmdlet_Remove-UserDefinedEvent PSCommand_Remove-UserDefinedEvent PSCmdlet_Select-Site PSCommand_Select-Site PSCmdlet_Send-Alarm PSCommand_Send-Alarm PSCmdlet_Send-GenericEvent PSCommand_Send-GenericEvent PSCmdlet_Send-MipMessage PSCommand_Send-MipMessage PSCmdlet_Send-UserDefinedEvent PSCommand_Send-UserDefinedEvent PSCmdlet_Set-CameraSetting PSCommand_Set-CameraSetting PSCmdlet_Set-ConfigurationItem PSCommand_Set-ConfigurationItem PSCmdlet_Set-DeviceAcl PSCommand_Set-DeviceAcl PSCmdlet_Set-HardwarePassword PSCommand_Set-HardwarePassword PSCmdlet_Set-HardwareSetting PSCommand_Set-HardwareSetting PSCmdlet_Set-InputSetting PSCommand_Set-InputSetting PSCmdlet_Set-MetadataSetting PSCommand_Set-MetadataSetting PSCmdlet_Set-MicrophoneSetting PSCommand_Set-MicrophoneSetting PSCmdlet_Set-OutputSetting PSCommand_Set-OutputSetting PSCmdlet_Set-OverallSecurity PSCommand_Set-OverallSecurity PSCmdlet_Set-SpeakerSetting PSCommand_Set-SpeakerSetting PSCmdlet_Set-Stream PSCommand_Set-Stream PSCmdlet_Start-Export PSCommand_Start-Export PSCmdlet_Test-Playback PSCommand_Test-Playback PSCmdlet_Trace-Events PSCommand_Trace-Events PSCmdlet_Update-AlarmLine PSCommand_Update-AlarmLine PSCmdlet_Update-Bookmark PSCommand_Update-Bookmark PSCmdlet_Update-EvidenceLock PSCommand_Update-EvidenceLock PSCmdlet_Update-RegisteredService PSCommand_Update-RegisteredService PSIncludes_Cmdlet PSFunction_Export-HardwareCsv PSCommand_Export-HardwareCsv PSFunction_Import-HardwareCsv PSCommand_Import-HardwareCsv PSFunction_Get-LicenseDetails PSCommand_Get-LicenseDetails PSFunction_Get-LicensedProducts PSCommand_Get-LicensedProducts PSFunction_Get-LicenseInfo PSCommand_Get-LicenseInfo PSFunction_Get-LicenseOverview PSCommand_Get-LicenseOverview PSFunction_Invoke-LicenseActivation PSCommand_Invoke-LicenseActivation PSFunction_Get-MobileServerInfo PSCommand_Get-MobileServerInfo PSFunction_Remove-MobileServerCertificate PSCommand_Remove-MobileServerCertificate PSFunction_Set-MobileServerCertificate PSCommand_Set-MobileServerCertificate PSFunction_Set-XProtectCertificate PSCommand_Set-XProtectCertificate PSFunction_Get-CameraRecordingStats PSCommand_Get-CameraRecordingStats PSFunction_Get-CameraReport PSCommand_Get-CameraReport PSFunction_Get-CurrentDeviceStatus PSCommand_Get-CurrentDeviceStatus PSFunction_Get-VideoDeviceStatistics PSCommand_Get-VideoDeviceStatistics PSFunction_Get-VmsCameraReport PSCommand_Get-VmsCameraReport PSFunction_Add-VmsArchiveStorage PSCommand_Add-VmsArchiveStorage PSFunction_Add-VmsStorage PSCommand_Add-VmsStorage PSFunction_Get-VmsArchiveStorage PSCommand_Get-VmsArchiveStorage PSFunction_Get-VmsStorage PSCommand_Get-VmsStorage PSFunction_Remove-VmsArchiveStorage PSCommand_Remove-VmsArchiveStorage PSFunction_Remove-VmsStorage PSCommand_Remove-VmsStorage PSFunction_ConvertFrom-ConfigurationApiProperties PSCommand_ConvertFrom-ConfigurationApiProperties PSFunction_ConvertFrom-GisPoint PSCommand_ConvertFrom-GisPoint PSFunction_ConvertFrom-Snapshot PSCommand_ConvertFrom-Snapshot PSFunction_ConvertTo-GisPoint PSCommand_ConvertTo-GisPoint PSFunction_Get-BankTable PSCommand_Get-BankTable PSFunction_Get-ConfigurationItemProperty PSCommand_Get-ConfigurationItemProperty PSFunction_Get-StreamProperties PSCommand_Get-StreamProperties PSFunction_Get-ValueDisplayName PSCommand_Get-ValueDisplayName PSFunction_Install-StableFPS PSCommand_Install-StableFPS PSFunction_Invoke-ServerConfigurator PSCommand_Invoke-ServerConfigurator PSFunction_Resize-Image PSCommand_Resize-Image PSFunction_Select-Camera PSCommand_Select-Camera PSFunction_Select-VideoOSItem PSCommand_Select-VideoOSItem PSFunction_Set-ConfigurationItemProperty PSCommand_Set-ConfigurationItemProperty PSFunction_Add-VmsFailoverGroup PSCommand_Add-VmsFailoverGroup PSFunction_Add-VmsHardware PSCommand_Add-VmsHardware PSFunction_ConvertFrom-ConfigurationItem PSCommand_ConvertFrom-ConfigurationItem PSFunction_Export-VmsHardware PSCommand_Export-VmsHardware PSFunction_Export-VmsLicenseRequest PSCommand_Export-VmsLicenseRequest PSFunction_Find-ConfigurationItem PSCommand_Find-ConfigurationItem PSFunction_Find-XProtectDevice PSCommand_Find-XProtectDevice PSFunction_Get-ManagementServerConfig PSCommand_Get-ManagementServerConfig PSFunction_Get-PlaybackInfo PSCommand_Get-PlaybackInfo PSFunction_Get-RecorderConfig PSCommand_Get-RecorderConfig PSFunction_Get-VmsCamera PSCommand_Get-VmsCamera PSFunction_Get-VmsCameraGeneralSetting PSCommand_Get-VmsCameraGeneralSetting PSFunction_Get-VmsCameraStream PSCommand_Get-VmsCameraStream PSFunction_Get-VmsDeviceStatus PSCommand_Get-VmsDeviceStatus PSFunction_Get-VmsFailoverGroup PSCommand_Get-VmsFailoverGroup PSFunction_Get-VmsStorageRetention PSCommand_Get-VmsStorageRetention PSFunction_Import-VmsHardware PSCommand_Import-VmsHardware PSFunction_Import-VmsLicense PSCommand_Import-VmsLicense PSFunction_Invoke-VmsLicenseActivation PSCommand_Invoke-VmsLicenseActivation PSFunction_Remove-Hardware PSCommand_Remove-Hardware PSFunction_Remove-VmsFailoverGroup PSCommand_Remove-VmsFailoverGroup PSFunction_Resolve-VmsDeviceGroupPath PSCommand_Resolve-VmsDeviceGroupPath PSFunction_Set-VmsCamera PSCommand_Set-VmsCamera PSFunction_Set-VmsCameraGeneralSetting PSCommand_Set-VmsCameraGeneralSetting PSFunction_Set-VmsCameraStream PSCommand_Set-VmsCameraStream PSFunction_Set-VmsLicense PSCommand_Set-VmsLicense PSFunction_Start-VmsHardwareScan PSCommand_Start-VmsHardwareScan PSFunction_Wait-VmsTask PSCommand_Wait-VmsTask PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2022-02-17T14:46:42Z</S>
+          <S N="NormalizedVersion">21.2.6</S>
+          <S N="Authors">Joshua Hendricks</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">MilestonePSTools.nuspec|messages.psd1|MilestonePSTools.Format.ps1xml|en-US\about_Get-VmsCameraReport.help.help.txt|en-US\about_MilestonePSTools.help.help.txt|MilestonePSTools.psd1|en-US\messages.psd1|MilestonePSTools.psm1|en-US\MilestonePSTools-help.xml|assets\3rd_party_software_terms_and_conditions.txt|en-US\MilestonePSTools.dll-Help.xml|assets\MIPSDK_EULA.txt|es-MX\about_Get-VmsCameraReport.help.help.txt|bin\MilestonePSTools.dll|es-MX\about_MilestonePSTools.help.help.txt|bin\MilestonePSTools.dll.config|es-MX\MilestonePSTools-help.xml|bin\MilestonePSTools.pdb|es-MX\MilestonePSTools.dll-Help.xml</S>
+          <S N="GUID">46909c4a-d5d8-4faf-830d-5a0df564fe7b</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7</S>
+          <S N="ProcessorArchitecture">Amd64</S>
+          <S N="CompanyName">Milestone Systems, Inc.</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\Users\sgiu\OneDrive - Milestone Systems\Documents\PowerShell\Modules\MilestonePSTools\21.2.6</S>
+    </MS>
+  </Obj>
+</Objs>
