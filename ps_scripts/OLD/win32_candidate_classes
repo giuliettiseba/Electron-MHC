@@ -1,0 +1,94 @@
+
+
+# Drivers information 
+# $i += $inc; Write-Progress -Activity "Collecting Data - Disk Drives" -Status "$i% Complete:" -PercentComplete $i
+# $Win32_DiskDrive = Get-CIMInstance -ClassName Win32_DiskDrive -CimSession $session `
+# | Select-Object  PSComputerName, Index, Model, Partitions, InterfaceType, @{Name = "Size_GB"; Expression = { [math]::round($_.Size / 1GB, 2) } } `
+# | Sort-Object -Property PSComputerName, Index 
+
+
+# # Disk Partitions 
+# $i += $inc; Write-Progress -Activity "Collecting Data - Disk Partitions" -Status "$i% Complete:" -PercentComplete $i
+# $Win32_DiskPartition = Get-CIMInstance -ClassName Win32_DiskPartition -CimSession $session  `
+# | Select-Object PSComputerName, Index, Name, @{Name = "Size_GB"; Expression = { [math]::round($_.Size / 1GB, 2) } } `
+#     , BlockSize, NumberOfBlocks, Bootable, PrimaryPartition, BootPartition, Type `
+# | Where-Object Type -eq 'GPT: Basic Data' `
+# | Sort-Object -Property PSComputerName, Index 
+
+
+# # Logical Disks 
+# $i += $inc; Write-Progress -Activity "Collecting Data - Logical Disks" -Status "$i% Complete:" -PercentComplete $i
+# $Win32_LogicalDisk = Get-CIMInstance -ClassName Win32_LogicalDisk -CimSession $session  `
+# | Select-Object PSComputerName, Name,VolumeName, Description, @{Name = "FreeSpace_GB"; Expression = { [math]::round($_.FreeSpace / 1GB, 2) } } `
+#     , @{Name = "Size_GB"; Expression = { [math]::round($_.Size / 1GB, 2) } } `
+#     , FileSystem, BlockSize, Compressed, MediaType `
+# | Where-Object FileSystem -ne $null `
+# | Sort-Object -Property PSComputerName, Name *
+
+
+# # BIOS
+# $i += $inc; Write-Progress -Activity "Collecting Data" -Status "$i% Complete:" -PercentComplete $i
+# $Win32_BIOS = Get-CIMInstance -ClassName Win32_BIOS -CimSession $session  `
+# | Select-Object Name, Manufacturer, BIOSVersion, PSComputerName `
+# | Sort-Object -Property PSComputerName, Name 
+
+
+# # Win32_CacheMemory
+# $i += $inc; Write-Progress -Activity "Collecting Data" -Status "$i% Complete:" -PercentComplete $i
+# $Win32_CacheMemory = Get-CIMInstance -ClassName Win32_CacheMemory -CimSession $session `
+# | Select-Object BlockSize, CacheSpeed, InstalledSize, Level, MaxCacheSize, NumberOfBlocks, Status, PSComputerName `
+# | Sort-Object -Property PSComputerName, Name 
+
+# Physical Memory
+$i += $inc; Write-Progress -Activity "Collecting Data" -Status "$i% Complete:" -PercentComplete $i 
+$Win32_PhysicalMemory = Get-CIMInstance -ClassName Win32_PhysicalMemory -CimSession $session `
+| Select-Object PSComputerName, Tag, BankLabel, @{Name = "Capacity_GB"; Expression = { [math]::round($_.Capacity / 1GB, 2) } } `
+    , Speed, ConfiguredClockSpeed `
+| Sort-Object -Property PSComputerName, Tag 
+
+
+# Base Boared 
+$i += $inc; Write-Progress -Activity "Collecting Data - " -Status "$i% Complete:" -PercentComplete $i
+$Win32_BaseBoard = Get-CIMInstance -ClassName Win32_BaseBoard -CimSession $session  `
+| Select-Object PSComputerName, Name, Product , Manufacturer, Version `
+| Sort-Object -Property PSComputerName, Name 
+
+#Enclosure
+$i += $inc; Write-Progress -Activity "Collecting Data" -Status "$i% Complete:" -PercentComplete $i
+$Win32_SystemEnclosure = Get-CIMInstance -ClassName Win32_SystemEnclosure -CimSession $session  `
+| Select-Object Manufacturer, model, SerialNumber, PSComputerName `
+| Sort-Object -Property PSComputerName 
+
+$i += $inc; Write-Progress -Activity "Collecting Data" -Status "$i% Complete:" -PercentComplete $i
+
+
+$Win32_NetworkConnection = Get-CIMInstance -ClassName Win32_NetworkConnection -CimSession $session `
+| Select-Object name, Status, LocalName, RemoteName, PSComputerName `
+| Sort-Object -Property PSComputerName, Name 
+
+$i += $inc; Write-Progress -Activity "Collecting Data" -Status "$i% Complete:" -PercentComplete $i
+
+
+#Display
+$Win32_DesktopMonitor = Get-CIMInstance -ClassName Win32_DesktopMonitor -CimSession $session  `
+| Select-Object DeviceID, Name, Description, MonitorManufacturer, PSComputerName `
+| Sort-Object -Property PSComputerName, Name 
+
+######################################################################################################################################################################################
+# System - GPU - CIM_VideoController
+######################################################################################################################################################################################
+
+$i += $inc; Write-Progress -Activity "Collecting Data - System - GPU" -Status "$i% Complete:" -PercentComplete $i
+$CIM_VideoController = Get-CimInstance -ClassName CIM_VideoController -CimSession $session `
+| Select-Object PSComputerName, Name, DeviceID, VideoProcessor, AdapterCompatibility `
+    , AdapterRAM, DriverDate, DriverVersion, Status `
+| Sort-Object -Property PSComputerName, Name 
+
+######################################################################################################################################################################################
+# Operating System - Computer Product  - Win32_ComputerSystemProduct
+######################################################################################################################################################################################
+$i += $inc; Write-Progress -Activity "Collecting Data - Operating System - Computer Product" -Status "$i% Complete:" -PercentComplete $i
+
+$Win32_ComputerSystemProduct = Get-CIMInstance -ClassName Win32_ComputerSystemProduct -CimSession $session  `
+| Select-Object Name, Version, Description, IdentifyingNumber, Vendor, PSComputerName `
+| Sort-Object -Property PSComputerName, Name 
