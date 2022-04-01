@@ -1,44 +1,50 @@
 ## Import Milestone PSTools
-Import-Module ..\pstools\MipSdkRedist\21.2.0\MipSdkRedist.psm1
-Import-Module ..\pstools\MilestonePSTools\21.2.6\MilestonePSTools.psm1
+Import-Module .\pstools\MipSdkRedist\21.2.0\MipSdkRedist.psm1
+Import-Module .\pstools\MilestonePSTools\21.2.6\MilestonePSTools.psm1
 
 ## Determine Server type
 
-Get-CimInstance -Query "Select * from Win32_Service Where Name like 'Milestone%' or Name like 'VideoOS%'" `
+$MilestoneServices = Get-CimInstance -Query "Select * from Win32_Service Where Name like 'Milestone%' or Name like 'VideoOS%'" `
 | Select-Object PSComputerName, Name, Description, State, StartMode, StartName, PathName `
 | Sort-Object -Property PSComputerName, Name 
 
 
+$IsManagementServer = ($MilestoneServices -match 'Milestone XProtect Management Server').Count > 0
 
+$IsRecordingServer = ($MilestoneServices -match 'Milestone XProtect Recording Server').Count > 0
 
+$HasAMilestoneService = ($MilestoneServices -match 'Milestone').Count > 0
 
-## build login 
-#$User = "MEX-LAB\SGIU" 
-#$PWord = ConvertTo-SecureString -String "Milestone1$" -AsPlainText -Force 
-#$Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord
-#$Session = New-CimSession 
+if ($HasAMilestoneService) {
 
+    ## XProtect Cumulative Updates
 
+    ## System RAM utilization
 
-#Connect-ManagementServer 
+    ## System CPU utilization
 
-## Milestone XProtect Version
+    ## Antivirus presence
 
+}
 
-## Milestone Care Status
+if ($IsManagementServer) {
 
-## XProtect Cumulative Updates
+    Connect-ManagementServer 
 
-## Media Deletion Due to Low Disk Space
+    ## Milestone XProtect Version
 
-## Media Deletion Due to Overflow
+    ## Milestone Care Status
 
-## System RAM utilization
+    ## Failover Configuration
 
-## System CPU utilization
+}
 
-## Failover Configuration
+if ($IsRecordingServer) {
 
-## Hardware acceleration capability
+    ## Media Deletion Due to Low Disk Space
 
-## Antivirus presence
+    ## Media Deletion Due to Overflow
+
+    ## Hardware acceleration capability
+
+}
