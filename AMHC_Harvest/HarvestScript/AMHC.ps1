@@ -1,6 +1,6 @@
 #region Import Milestone PSTools
-Import-Module .\pstools\MipSdkRedist\21.2.0\MipSdkRedist.psm1
-Import-Module .\pstools\MilestonePSTools\21.2.6\MilestonePSTools.psm1
+Import-Module .\AMHC_Harvest\MilestonePSTools\MipSdkRedist\21.2.0\MipSdkRedist.psm1
+Import-Module .\AMHC_Harvest\MilestonePSTools\MilestonePSTools\21.2.6\MilestonePSTools.psm1
 #endregion
 
 #region Initialize 
