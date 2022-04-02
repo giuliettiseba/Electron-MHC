@@ -1,118 +1,61 @@
 {
-    "ServerName": "USLT-SGIU-04",
-    "TimeStamp": "2022-04-02 00:30:59Z",
-    "MilestoneXProtectVersion": {
-        "Version": null,
-        "Product": null
-    },
-    "MilestoneCareStatus": {
-        "CarePlus": null,
-        "ExpirationDate": null
-    },
-    "XProtectCumulativeUpdates": {
-        "CumulativeUpdates": null
-    },
-    "MediaDeletionDuetoLowDiskSpace": {
-        "DeletionDuetoLowDiskSpaceErrorList": null
-    },
-    "MediaDeletionDuetoOverflow": {
-        "MediaDeletionDuetoOverflowList": null
-    },
-    "SystemRAMutilization": {
-        "Samples": [{
-                "TimeStamp": "2022-04-02 00:30:37Z",
-                "Value": 9555748
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:38Z",
-                "Value": 9550112
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:40Z",
-                "Value": 9552204
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:41Z",
-                "Value": 9546032
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:42Z",
-                "Value": 9542124
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:43Z",
-                "Value": 9544424
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:44Z",
-                "Value": 9542204
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:45Z",
-                "Value": 9557740
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:46Z",
-                "Value": 9596048
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:47Z",
-                "Value": 9613316
-            }
-        ],
-        "Max": 16489816
-    },
-    "SystemCPUutilization": {
-        "Samples": [{
-                "TimeStamp": "2022-04-02 00:30:49Z",
-                "Value": 19
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:50Z",
-                "Value": 5
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:51Z",
-                "Value": 2
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:52Z",
-                "Value": 6
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:54Z",
-                "Value": 4
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:55Z",
-                "Value": 3
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:56Z",
-                "Value": 4
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:57Z",
-                "Value": 3
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:58Z",
-                "Value": 0
-            },
-            {
-                "TimeStamp": "2022-04-02 00:30:59Z",
-                "Value": 2
-            }
-        ],
-        "Max": 100
-    },
-    "FailoverConfiguration": {},
-    "HardwareaAcelerationCapability": {
-        "GPUManufacturer": null,
-        "GPUModel": null,
-        "GPUMemory": null
-    },
-    "AntivirusPresence": {
-        "Antivirus": null
-    }
+    "ServerName":  "USLT-SGIU-04",
+    "TimeStamp":  "2022-04-02 00:50:27Z",
+    "MilestoneXProtectVersion":  {
+                                     "Version":  null,
+                                     "Product":  null
+                                 },
+    "MilestoneCareStatus":  {
+                                "CarePlus":  null,
+                                "ExpirationDate":  null
+                            },
+    "XProtectCumulativeUpdates":  {
+                                      "CumulativeUpdates":  null
+                                  },
+    "MediaDeletionDuetoLowDiskSpace":  {
+                                           "DeletionDuetoLowDiskSpaceErrorList":  null
+                                       },
+    "MediaDeletionDuetoOverflow":  {
+                                       "MediaDeletionDuetoOverflowList":  null
+                                   },
+    "SystemRAMutilization":  {
+                                 "Samples":  [
+                                                 {
+                                                     "TimeStamp":  "2022-04-02 00:50:25Z",
+                                                     "Value":  9772768
+                                                 }
+                                             ],
+                                 "Max":  16489816
+                             },
+    "SystemCPUutilization":  {
+                                 "Samples":  [
+                                                 {
+                                                     "TimeStamp":  "2022-04-02 00:50:27Z",
+                                                     "Value":  14
+                                                 }
+                                             ],
+                                 "Max":  100
+                             },
+    "FailoverConfiguration":  {
+
+                              },
+    "HardwareaAcelerationCapability":  [
+                                           {
+                                               "VideoProcessor":  "Quadro T2000",
+                                               "Name":  "NVIDIA Quadro T2000",
+                                               "AdapterRAM":  4293918720,
+                                               "DriverDate":  "\/Date(1644451200000)\/",
+                                               "DriverVersion":  "30.0.15.1179"
+                                           },
+                                           {
+                                               "VideoProcessor":  "Intel(R) UHD Graphics Family",
+                                               "Name":  "Intel(R) UHD Graphics",
+                                               "AdapterRAM":  1073741824,
+                                               "DriverDate":  "\/Date(1636934400000)\/",
+                                               "DriverVersion":  "30.0.101.1122"
+                                           }
+                                       ],
+    "AntivirusPresence":  {
+                              "Antivirus":  null
+                          }
 }

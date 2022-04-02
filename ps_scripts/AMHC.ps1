@@ -107,13 +107,8 @@ if ($HasMilestoneService) {
 
     #region Hardware acceleration capability
     $CompletePercentage += $inc; Write-Progress -Activity "Hardware acceleration capability" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
-
-
-    $HardwareaAcelerationCapability = [pscustomobject]@{
-        GPUManufacturer = $GPUManufacturer
-        GPUModel        = $GPUModel
-        GPUMemory       = $GPUMemory
-    }
+    
+    $HardwareaAcelerationCapability = Get-CIMInstance -ClassName Win32_VideoController | Select-Object VideoProcessor, Name, AdapterRAM, DriverDate, DriverVersion
     #endregion
 
     #region Antivirus presence
