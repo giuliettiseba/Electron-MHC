@@ -14,6 +14,9 @@ $ServerName = $env:COMPUTERNAME
 ## Get Current Time 
 $TimeStamp = Get-Date
 
+## Perfomance Counter Sample Amount 
+$samples = 10
+
 ##############################################################################
 ## Determine Server type
 ##############################################################################
@@ -29,12 +32,28 @@ $IsRecordingServer = ($MilestoneServices -match 'Milestone XProtect Recording Se
 
 $HasMilestoneService = ($MilestoneServices -match 'Milestone').Count > 0
 
+### DEBUG
+$IsManagementServer = $false
+$IsRecordingServer = $true
+$HasMilestoneService = $true
+
+$FunctionsToCall = 1
+if ($IsManagementServer) { $FunctionsToCall += 3 }
+if ($IsRecordingServer) { $FunctionsToCall += 2 }
+if ($HasMilestoneService) { $FunctionsToCall += 5 }
+
+
+
+
 ##############################################################################
 
+$CompletePercentage = 0;
+$inc = 100 / $FunctionsToCall;
 
 if ($HasMilestoneService) {
 
     ## XProtect Cumulative Updates
+    $CompletePercentage += $inc; Write-Progress -Activity "XProtect Cumulative Updates" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
     
     $XProtectCumulativeUpdates = [pscustomobject]@{
         CumulativeUpdates = $CumulativeUpdates
@@ -44,10 +63,8 @@ if ($HasMilestoneService) {
     ## Performance Counters
     ##############################################################################
 
-    $samples = 10
-
     ## System RAM utilization
-
+    
     $SystemRAMutilization = [pscustomobject]@{
         Samples = New-Object System.Collections.Generic.List[System.Object]
         Max     = ($TotalMemory | Where-Object PSComputerName -eq $s.ComputerName).TotalVisibleMemorySize
@@ -56,11 +73,13 @@ if ($HasMilestoneService) {
     $TotalMemory = Get-CIMInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize
 
     for ($i = 0; $i -lt $samples; $i++) {
+        $CompletePercentage += $inc / $samples ; Write-Progress -Activity " System RAM utilization" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
         $mem_sample = Get-CIMInstance Win32_OperatingSystem | Select-Object @{Name = "UsedMemory"; Expression = { $_.TotalVisibleMemorySize - $_.FreePhysicalMemory } }
         
         $timestamp = (Get-Date).ToString('u')
 
-        $ $SystemRAMutilization.Samples.Add(
+        $SystemRAMutilization.Samples.Add(
             [pscustomobject]@{
                 TimeStamp = $timestamp
                 Value     = $mem_sample.UsedMemory
@@ -72,13 +91,14 @@ if ($HasMilestoneService) {
 
     ## System CPU utilization
 
-    
     $SystemCPUutilization = [pscustomobject]@{
         Samples = New-Object System.Collections.Generic.List[System.Object]
         Max     = 100
     }
     
     for ($i = 0; $i -lt $samples; $i++) {
+        $CompletePercentage += $inc / $samples; Write-Progress -Activity " System CPU utilization" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
         $cpu_sample = Get-CimInstance Win32_Processor | Select-Object LoadPercentage
         
         $timestamp = (Get-Date).ToString('u')
@@ -89,12 +109,14 @@ if ($HasMilestoneService) {
                 Value     = $cpu_sample.LoadPercentage
             }
         )
-        Start-Sleep -Seconds 1
+        #Start-Sleep -Seconds 1 # No Need to sleep, CIM call is quite slow 
     }
     
     ##############################################################################
 
     ## Hardware acceleration capability
+    $CompletePercentage += $inc; Write-Progress -Activity "Hardware acceleration capability" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
 
     $HardwareaAcelerationCapability = [pscustomobject]@{
         GPUManufacturer = $GPUManufacturer
@@ -103,6 +125,8 @@ if ($HasMilestoneService) {
     }
 
     ## Antivirus presence
+    $CompletePercentage += $inc; Write-Progress -Activity "Antivirus presence" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
     $AntivirusPresence = [pscustomobject]@{
         Antivirus = $Antivirus
     }
@@ -110,15 +134,20 @@ if ($HasMilestoneService) {
 
 if ($IsManagementServer) {
 
+    $CompletePercentage += $inc; Write-Progress -Activity "Connect ManagementServer" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
     Connect-ManagementServer -AcceptEula
 
-    ## MilestoneXProtectVersion
+    ## Milestone XProtect Version
+    $CompletePercentage += $inc; Write-Progress -Activity "Milestone XProtect Version" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
     $MilestoneXProtectVersion = [pscustomobject]@{
         Version = $Version
         Product = $Product
     }
 
     ## Milestone Care Status
+    $CompletePercentage += $inc; Write-Progress -Activity "Milestone Care Status" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
     $MilestoneCareStatus = [pscustomobject]@{
         CarePlus       = $CarePlus
         ExpirationDate = $ExpirationDate
@@ -136,6 +165,8 @@ if ($IsRecordingServer) {
     $RecordingServerLogPath = "{$env:ProgramData}\Milestone\Mileston Recording Server\Logs"
 
     ## Media Deletion Due to Low Disk Space
+    $CompletePercentage += $inc; Write-Progress -Activity "Media Deletion Due to Low Disk Space" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
     #JOIN DATABASE LOGS AND FIND THE ERROR
 
     $MediaDeletionDuetoLowDiskSpace = [pscustomobject]@{
@@ -144,12 +175,13 @@ if ($IsRecordingServer) {
 
     
     ## Media Deletion Due to Overflow
+    $CompletePercentage += $inc; Write-Progress -Activity "Media Deletion Due to Overflow" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
+
     # READ DEVICEHANDLING LOG AND FINF OVERFLOW ERROR
 
     $MediaDeletionDuetoOverflow = [pscustomobject]@{
         MediaDeletionDuetoOverflowList = $MediaDeletionDuetoOverflowList
     }
-
 
     $Output = [PSCustomObject]@{
         ServerName                     = $ServerName 
@@ -166,6 +198,8 @@ if ($IsRecordingServer) {
         AntivirusPresence              = $AntivirusPresence
     }
 
-    $Output | ConvertTo-Json -Depth 100 | Set-Content C:\Users\sgiu\source\repos\Electron-MHC\json\obj.json
+
+    $CompletePercentage += $inc; Write-Progress -Activity "Write Output" -Status "100% Complete:" -PercentComplete 100
+    $Output | ConvertTo-Json -Depth 100 | Set-Content .\output.json
     
 }
