@@ -1,61 +1,56 @@
 {
-    "ServerName":  "USLT-SGIU-04",
-    "TimeStamp":  "2022-04-02 00:50:27Z",
-    "MilestoneXProtectVersion":  {
-                                     "Version":  null,
-                                     "Product":  null
-                                 },
-    "MilestoneCareStatus":  {
-                                "CarePlus":  null,
-                                "ExpirationDate":  null
-                            },
-    "XProtectCumulativeUpdates":  {
-                                      "CumulativeUpdates":  null
-                                  },
-    "MediaDeletionDuetoLowDiskSpace":  {
-                                           "DeletionDuetoLowDiskSpaceErrorList":  null
-                                       },
-    "MediaDeletionDuetoOverflow":  {
-                                       "MediaDeletionDuetoOverflowList":  null
-                                   },
-    "SystemRAMutilization":  {
-                                 "Samples":  [
-                                                 {
-                                                     "TimeStamp":  "2022-04-02 00:50:25Z",
-                                                     "Value":  9772768
-                                                 }
-                                             ],
-                                 "Max":  16489816
-                             },
-    "SystemCPUutilization":  {
-                                 "Samples":  [
-                                                 {
-                                                     "TimeStamp":  "2022-04-02 00:50:27Z",
-                                                     "Value":  14
-                                                 }
-                                             ],
-                                 "Max":  100
-                             },
-    "FailoverConfiguration":  {
+    "ServerName": "USLT-SGIU-04",
+    "TimeStamp": "2022-04-02 00:50:27Z",
+    "MilestoneXProtectVersion": {
+        "Version": null,
+        "Product": null
+    },
+    "MilestoneCareStatus": {
+        "CarePlus": null,
+        "ExpirationDate": null
+    },
+    "XProtectCumulativeUpdates": {
+        "CumulativeUpdates": null
+    },
+    "MediaDeletionDuetoLowDiskSpace": {
+        "DeletionDuetoLowDiskSpaceErrorList": null
+    },
+    "MediaDeletionDuetoOverflow": {
+        "MediaDeletionDuetoOverflowList": null
+    },
+    "SystemRAMutilization": {
+        "Samples": [{
+            "TimeStamp": "2022-04-02 00:50:25Z",
+            "Value": 9772768
+        }],
+        "Max": 16489816
+    },
+    "SystemCPUutilization": {
+        "Samples": [{
+            "TimeStamp": "2022-04-02 00:50:27Z",
+            "Value": 14
+        }],
+        "Max": 100
+    },
+    "FailoverConfiguration": {
 
-                              },
-    "HardwareaAcelerationCapability":  [
-                                           {
-                                               "VideoProcessor":  "Quadro T2000",
-                                               "Name":  "NVIDIA Quadro T2000",
-                                               "AdapterRAM":  4293918720,
-                                               "DriverDate":  "\/Date(1644451200000)\/",
-                                               "DriverVersion":  "30.0.15.1179"
-                                           },
-                                           {
-                                               "VideoProcessor":  "Intel(R) UHD Graphics Family",
-                                               "Name":  "Intel(R) UHD Graphics",
-                                               "AdapterRAM":  1073741824,
-                                               "DriverDate":  "\/Date(1636934400000)\/",
-                                               "DriverVersion":  "30.0.101.1122"
-                                           }
-                                       ],
-    "AntivirusPresence":  {
-                              "Antivirus":  null
-                          }
+    },
+    "HardwareaAcelerationCapability": [{
+            "VideoProcessor": "Quadro T2000",
+            "Name": "NVIDIA Quadro T2000",
+            "AdapterRAM": 4293918720,
+            "DriverDate": "\/Date(1644451200000)\/",
+            "DriverVersion": "30.0.15.1179"
+        },
+        {
+            "VideoProcessor": "Intel(R) UHD Graphics Family",
+            "Name": "Intel(R) UHD Graphics",
+            "AdapterRAM": 1073741824,
+            "DriverDate": "\/Date(1636934400000)\/",
+            "DriverVersion": "30.0.101.1122"
+        }
+    ],
+    "AntivirusPresence": {
+        "Antivirus": null
+    }
 }
