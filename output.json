@@ -1,56 +1,22 @@
 {
-    "ServerName": "USLT-SGIU-04",
-    "TimeStamp": "2022-04-02 00:50:27Z",
-    "MilestoneXProtectVersion": {
-        "Version": null,
-        "Product": null
-    },
-    "MilestoneCareStatus": {
-        "CarePlus": null,
-        "ExpirationDate": null
-    },
-    "XProtectCumulativeUpdates": {
-        "CumulativeUpdates": null
-    },
-    "MediaDeletionDuetoLowDiskSpace": {
-        "DeletionDuetoLowDiskSpaceErrorList": null
-    },
-    "MediaDeletionDuetoOverflow": {
-        "MediaDeletionDuetoOverflowList": null
-    },
-    "SystemRAMutilization": {
-        "Samples": [{
-            "TimeStamp": "2022-04-02 00:50:25Z",
-            "Value": 9772768
-        }],
-        "Max": 16489816
-    },
-    "SystemCPUutilization": {
-        "Samples": [{
-            "TimeStamp": "2022-04-02 00:50:27Z",
-            "Value": 14
-        }],
-        "Max": 100
-    },
-    "FailoverConfiguration": {
+    "ServerName":  "SGIU-MS",
+    "TimeStamp":  "\/Date(1648884181164)\/",
+    "MilestoneXProtectVersion":  {
+                                     "SLC":  "M01-C01-221-01-6C42E0",
+                                     "Product":  "XProtect Corporate 2022 R1"
+                                 },
+    "MilestoneCareStatus":  {
+                                "CarePlus":  "9/29/2027",
+                                "ExpirationDate":  "9/29/2027"
+                            },
+    "XProtectCumulativeUpdates":  null,
+    "MediaDeletionDuetoLowDiskSpace":  null,
+    "MediaDeletionDuetoOverflow":  null,
+    "SystemRAMutilization":  null,
+    "SystemCPUutilization":  null,
+    "FailoverConfiguration":  {
 
-    },
-    "HardwareaAcelerationCapability": [{
-            "VideoProcessor": "Quadro T2000",
-            "Name": "NVIDIA Quadro T2000",
-            "AdapterRAM": 4293918720,
-            "DriverDate": "\/Date(1644451200000)\/",
-            "DriverVersion": "30.0.15.1179"
-        },
-        {
-            "VideoProcessor": "Intel(R) UHD Graphics Family",
-            "Name": "Intel(R) UHD Graphics",
-            "AdapterRAM": 1073741824,
-            "DriverDate": "\/Date(1636934400000)\/",
-            "DriverVersion": "30.0.101.1122"
-        }
-    ],
-    "AntivirusPresence": {
-        "Antivirus": null
-    }
+                              },
+    "HardwareaAcelerationCapability":  null,
+    "AntivirusPresence":  null
 }

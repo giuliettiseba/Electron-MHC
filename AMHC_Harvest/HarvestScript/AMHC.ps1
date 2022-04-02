@@ -33,9 +33,9 @@ $IsRecordingServer = ($MilestoneServices -match 'Milestone XProtect Recording Se
 $HasMilestoneService = ($MilestoneServices -match 'Milestone').Count > 0
 
 # DEBUG
-$IsManagementServer = $false
-$IsRecordingServer = $true
-$HasMilestoneService = $true
+$IsManagementServer = $true
+$IsRecordingServer = $false
+$HasMilestoneService = $false
 
 $FunctionsToCall = 1
 if ($IsManagementServer) { $FunctionsToCall += 3 }
@@ -126,15 +126,17 @@ if ($IsManagementServer) {
 
     #region Connect ManagementServer
     $CompletePercentage += $inc; Write-Progress -Activity "Connect ManagementServer" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
-    Connect-ManagementServer -AcceptEula
+    Connect-ManagementServer -AcceptEula -Force
     #endregion
+
+    $License = (Get-LicensedProducts)[0]
 
     #region Milestone XProtect Version
     $CompletePercentage += $inc; Write-Progress -Activity "Milestone XProtect Version" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
 
     $MilestoneXProtectVersion = [pscustomobject]@{
-        Version = $Version
-        Product = $Product
+        SLC = $License.Slc
+        Product = $License.DisplayName
     }
     #endregion
 
@@ -142,8 +144,8 @@ if ($IsManagementServer) {
     $CompletePercentage += $inc; Write-Progress -Activity "Milestone Care Status" -Status "$CompletePercentage% Complete:" -PercentComplete $CompletePercentage
 
     $MilestoneCareStatus = [pscustomobject]@{
-        CarePlus       = $CarePlus
-        ExpirationDate = $ExpirationDate
+        CarePlus       = $License.CarePlus 
+        ExpirationDate = $License.CarePlus
     }
     #endregion
 
